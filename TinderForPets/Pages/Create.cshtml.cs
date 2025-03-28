@@ -8,14 +8,14 @@ namespace TinderForPets.Pages
 {
     public class CreateModel : PageModel
     {
-
         private PetService _petService;
-        public Pet pet { get; set; }
+        [BindProperty]
+        public Pet Pet { get; set; }
 
         public CreateModel(PetService petService)
         {
             _petService = petService;
-            pet = new Pet();
+            Pet = new Pet();
         }
 
         public void OnGet()
@@ -24,9 +24,8 @@ namespace TinderForPets.Pages
 
         public IActionResult OnPost()
         {
-            Debug.WriteLine("efwef" + pet.Name);
-            _petService.Add(pet);
-
+            Debug.WriteLine("efwef " + Pet.Name);
+            _petService.Add(Pet);
             return RedirectToPage("/index");
         }
 

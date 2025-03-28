@@ -4,14 +4,9 @@
 }
 
 <form method="post">
-	<div>
-		<input type="text" name="PetName" asp-for="pet.Name" placeholder="Name: "/>
-		<input type="text" name="PetDescription" asp-for="pet.Description" placeholder="Description: " />
-		<input type="text" name="PetSpecies" asp-for="pet.Species" placeholder="Species: " />
-		<input type="number" name="PetAge" asp-for="pet.Age" placeholder="Age: " />
-
-		<input type="submit" value="Gem"/>
-
-
-	</div>
+	<input type="text" name="Name" asp-for="Pet.Name" placeholder="Name: "/>
+	<input type="text" name="Description" asp-for="Pet.Description" placeholder="Description: " />
+	<input type="text" name="Species" asp-for="Pet.Species" placeholder="Species: " />
+	<input type="number" name="Age" asp-for="Pet.Age" placeholder="Age: " />
+	<input type="submit" value="Gem"/>
 </form>

@@ -40,9 +40,13 @@
                             <button class="btn btn-outline-danger" title="Nope ❤️‍🩹">
                                 <i class="bi bi-x-lg"></i> Nej tak
                             </button>
+                            @pet.Likes
+                            <form method="post" asp-page-handler="Liked">
+                            <input type="hidden" name="PetID" value="@pet.ID"/>
                             <button class="btn btn-outline-success" title="Like ❤️">
                                 <i class="bi bi-heart-fill"></i> Like
                             </button>
+                            </form>
                         </div>
                     </div>
                 </div>

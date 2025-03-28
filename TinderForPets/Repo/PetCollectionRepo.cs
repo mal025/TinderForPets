@@ -1,4 +1,5 @@
-﻿using TinderForPets.Model;
+﻿using System.Diagnostics.Eventing.Reader;
+using TinderForPets.Model;
 
 namespace TinderForPets.Repo
 {
@@ -8,9 +9,9 @@ namespace TinderForPets.Repo
 
         public PetCollectionRepo()
         {
-            _pets.Add(new Pet("Buster", "Verdens sødeste kat", "flatten.jpg", "Kat", 5));
-            _pets.Add(new Pet("Simba", "En stor mis", "Simba21-1024x683.jpg", "Kat", 2));
-            _pets.Add(new Pet("Adolf", "En tysk kat", "tyskkat.jpg", "Kat", 5));
+            _pets.Add(new Pet(234, "Buster", "Verdens sødeste kat", "flatten.jpg", "Kat", 5, 0));
+            _pets.Add(new Pet(3252, "Simba", "En stor mis", "Simba21-1024x683.jpg", "Kat", 2, 0));
+            _pets.Add(new Pet(45, "Adolf", "En tysk kat", "tyskkat.jpg", "Kat", 5, 0));
         }
 
         public List<Pet> GetAll()
@@ -22,5 +23,16 @@ namespace TinderForPets.Repo
             _pets.Add(pet);
         }
 
+        public Pet Get(int id)
+        {
+            foreach (Pet pet in _pets)
+            {
+                if (id == pet.ID)
+                {
+                    return pet;
+                }
+            }
+            return null;
+        }
     }
 }

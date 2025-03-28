@@ -11,26 +11,31 @@ namespace TinderForPets.Pages
     public class IndexModel : PageModel
     {
 
-        //  public Animal Cat { set;get; }
-
-        // private Pet[] _animals = new Pet[3];
 
         private readonly ILogger<IndexModel> _logger;
 
         public List<Pet> Pets { get; set; }
 
-        // public Pet[] Pets { get => _animals; set => _animals = value; }
+        private PetService _petservice;
+
 
         public IndexModel(ILogger<IndexModel> logger, PetService petService)
         {
             _logger = logger;
             Pets = petService.GetAll();
+            _petservice = petService;
 
         }
 
         public void OnGet()
         {
 
+        }
+
+        public void OnPostLiked(int PetID)
+        {
+            Pet p = _petservice.Get(PetID);
+            p.Likes++;
         }
     }
 }

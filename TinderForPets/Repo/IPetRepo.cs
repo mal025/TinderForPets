@@ -6,5 +6,7 @@ namespace TinderForPets.Repo
     {
         public List<Pet> GetAll();
         public void Add(Pet pet);
+
+        public Pet Get(int id);
     }
 }

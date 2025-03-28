@@ -25,5 +25,10 @@ namespace TinderForPets.Services
             _petRepo.Add(pet);
         }
 
+        public Pet Get(int id)
+        {
+            return _petRepo.Get(id);
+        }
+
     }
 }
