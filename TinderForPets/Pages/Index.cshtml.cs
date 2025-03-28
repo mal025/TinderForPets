@@ -31,11 +31,6 @@ namespace TinderForPets.Pages
         public void OnGet()
         {
 
-
-            //petRepo.Add(new Pet("Buster", "Verdens sødeste kat", "flatten.jpg", "Kat", 5));
-            //petRepo.Add(new Pet("Simba", "En stor mis", "Simba21-1024x683.jpg", "Kat", 2));
-            //petRepo.Add(new Pet("Adolf", "En tysk kat", "adolf.jpg", "Kat", 5));
-
         }
     }
 }
