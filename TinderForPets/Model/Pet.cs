@@ -9,6 +9,11 @@
         public int Age { get; set; }
         public string Species { set; get; }
 
+        public Pet()
+        {
+
+        }
+
         public Pet(string name, string description, string imagePath, string species, int age)
         {
             Name = name;
@@ -16,7 +21,6 @@
             ImagePath = imagePath;
             Species = species;
             Age = age;
-
         }
     }
 }
