@@ -9,7 +9,7 @@ namespace TinderForPets
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddSingleton<IPetRepo, PetCollectionRepo>();
+            builder.Services.AddSingleton<IPetRepo, PetJsonRepo>();
             builder.Services.AddSingleton<PetService>();
 
             // Add services to the container.

@@ -5,7 +5,7 @@ namespace TinderForPets.Repo
 {
     public class PetCollectionRepo: IPetRepo
     {
-        List<Pet> _pets = new List<Pet>();
+        protected List<Pet> _pets = new List<Pet>();
 
         public PetCollectionRepo()
         {
@@ -18,7 +18,7 @@ namespace TinderForPets.Repo
         {
             return _pets;
         }
-        public void Add(Pet pet)
+        public virtual void Add(Pet pet)
         {
             _pets.Add(pet);
         }
